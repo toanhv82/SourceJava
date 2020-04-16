@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userSms" class="com.ocb.ttt.service.dto.UserAPI">              
+        <property name="user" value="sms"></property> 
+        <property name="pw" value="2873565D88C15E8D8BA4C26FAA9B4FE6D4E16BD7440EA150822E7CF268AAA7AE"></property> 
+        <property name="role" value="5"></property>  
+    </bean>  
+    <bean id="userApi" class="com.ocb.ttt.service.dto.UserAPI">              
+        <property name="user" value="api"></property> 
+        <property name="pw" value="2873565D88C15E8D8BA4C26FAA9B4FE6D4E16BD7440EA150822E7CF268AAA7AE"></property> 
+        <property name="role" value="6"></property>  
+    </bean> 
+    <bean id="managerApiUser"  class="com.ocb.ttt.sevice.security.ServiceUserLogin">        
+        <property name="listUser">
+            <list value-type="java.util.ArrayList">
+                <ref bean="userSms"/>
+                <ref bean="userApi"/>               
+            </list>
+        </property>
+    </bean>             
+    <bean id="ds" class="com.ocb.ttt.db.connection.OCBDriverManagerDataSource" >
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@10.96.62.10:1521:OWDEV" />
+<!--        <property name="url" value="jdbc:oracle:thin:@10.96.62.10:1521:wAY4UAT" />-->
+<!--         <property name="url" value="jdbc:oracle:thin:@10.96.62.10:1521:way4pilot" />-->
+<!--        <property name="url" value="jdbc:oracle:thin:@DC-WAY4-DB-SCAN.ocb.vn:1521:OWPROD" />-->
+        <property name="username" value="ocb" />
+         <property name="password" value="EBD935F5A1E2FBF7B34680F403822370" />   
+<!--        <property name="password" value="054A84106F6F14EC8DA5577E50CA37BF" />   -->
+<!--        <property name="password" value="B529A5B5E7952379281836A75D168BEA" />-->
+<!--        <property name="password" value="994D761F08B964F9980B77310A721EA1C7CFE18C16EED6D64A8FFFAD1444581A" />   -->
+    </bean>
+     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">              
+        <property name="dataSource" ref="ds"></property>  
+    </bean> 
+</beans>

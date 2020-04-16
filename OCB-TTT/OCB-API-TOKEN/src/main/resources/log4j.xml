@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="true">
+	<!-- Console Appender -->
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+        </layout>
+    </appender>
+    <!-- Info Log File Appender -->
+    <appender name="info-log" class="org.apache.log4j.FileAppender">
+        <param name="File" value="c:/cms/info.log" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="debug" />
+            <param name="LevelMax" value="info" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+    </appender>
+    <!-- Error Log File Appender -->
+    <appender name="error-log" class="org.apache.log4j.FileAppender">
+        <param name="Append" value="false" />
+        <param name="File" value="c:/cms/error.log" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="warn" />
+            <param name="LevelMax" value="fatal" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+    </appender>
+     <appender name="db-log" class="org.apache.log4j.FileAppender">
+        <param name="Append" value="false" />
+        <param name="File" value="c:/cms/db.log" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="info" />
+            <param name="LevelMax" value="fatal" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+    </appender>
+    <appender name="ws-log" class="org.apache.log4j.FileAppender">
+        <param name="Append" value="false" />
+        <param name="File" value="c:/cms/ws.log" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="info" />
+            <param name="LevelMax" value="fatal" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+    </appender>
+    <logger name="com.ocb.ttt.ws.way4.api.ServiceCustomerClassifiers">
+        <appender-ref ref="info-log" />
+        <appender-ref ref="error-log" />
+    </logger>
+    <logger name="com.ocb.ttt.ws.dao.WSCustomerClassifiersDao">
+        <appender-ref ref="db-log" />               
+    </logger>
+    <logger name="com.ocb.ttt.ws.way4.api.ServiceCardPostWay4">
+        <appender-ref ref="ws-log" />  
+        <appender-ref ref="info-log" />             
+    </logger>
+  
+    <root>
+        <level value="debug" />
+        <appender-ref ref="console" />
+    </root>
+</log4j:configuration>

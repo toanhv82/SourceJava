@@ -1,0 +1,2 @@
+DEBUG | 2019-07-21 09:14:07 | [main] log.LogFile (LogFile.java:36) - Log4jExample: A Sample Debug Message
+INFO  | 2019-07-21 09:14:07 | [main] log.LogFile (LogFile.java:37) - Log4jExample: A Sample Info  Message

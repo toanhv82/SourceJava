@@ -1,0 +1,26 @@
+<R5B046>
+  <Request>
+    <ReqHeader>
+      <ReqCls type="short">9581</ReqCls>
+      <FuncIn type="string" length="1">U</FuncIn>
+      <ActLog type="numeric" length="1">0</ActLog>
+      <GrpID type="string" length="8">UAT</GrpID>
+      <BrchCde type="string" length="5">0001</BrchCde>
+      <UsrID type="string" length="8">{GDV1}</UsrID>
+      <TaskID type="short">9502</TaskID>
+      <TrmID type="string" length="8"></TrmID>
+      <FI type="fi">970448</FI>
+      <TandemCfg type="string" length="13"></TandemCfg>
+      <GWHNDL type="integer">0</GWHNDL>
+      <Filler1 type="string" length="27"></Filler1>
+    </ReqHeader>
+    <ReqBody>
+      <CrdIssTrkMaintReq>
+        <CrdNo type="cardNo" length="19">{card_number}</CrdNo>
+        <ProNo type="numeric" length="8">00000000</ProNo>
+        <Seq type="numeric" length="6">000009</Seq>
+        <AutoActvFlg type="string" length="1">N</AutoActvFlg>
+      </CrdIssTrkMaintReq>
+    </ReqBody>
+  </Request>
+</R5B046>

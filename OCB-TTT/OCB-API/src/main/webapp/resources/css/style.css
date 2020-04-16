@@ -1,0 +1,47 @@
+/* Template by freewebsitetemplates.com */
+
+div.page {
+    height: 600px;
+    width: 50%;
+}
+div.inline { 
+    float:left; 
+    display: inline;
+}
+p.fontm{
+    font-size:15.0pt;
+    font-family:"Arial";
+    padding-left: 47px;
+    width: 800px;
+}
+p.padleft{
+    padding-left: 40px;
+}
+p.padright{
+    width: 800px;          
+    text-align: center;
+    padding-left: 273px;
+}
+p.font15{
+    font-size: 15.0pt;
+    font-family:"Arial";
+}
+p.font16{
+    font-size: 16.0pt;
+    font-family:"Arial";
+}
+p.fontl{
+    font-size: 16.0pt;
+    font-family:"Arial";
+}
+b.fontl{
+    font-size: 16.0pt;
+    font-family:"Arial";
+    padding-left: 5px;
+
+}
+img.imgs{
+    height: 16px; 
+    width: 16px; 
+    padding-left: 25px;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="ds" class="com.ocb.ttt.db.connection.OCBDriverManagerDataSource" >
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@10.96.62.10:1521:way4pilot" />
+<!--        <property name="url" value="jdbc:oracle:thin:@DC-WAY4-DB-SCAN.ocb.vn:1521:OWPROD" />-->
+<!--        <property name="url" value="jdbc:oracle:thin:@10.96.62.10:1521:way4uat" />-->
+        <property name="username" value="ocb" />
+        
+        <property name="password" value="B529A5B5E7952379281836A75D168BEA" />   
+<!--        <property name="password" value="994D761F08B964F9980B77310A721EA1C7CFE18C16EED6D64A8FFFAD1444581A" />   -->
+    </bean>
+    
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">              
+        <property name="dataSource" ref="ds"></property>  
+    </bean>           
+    
+</beans>

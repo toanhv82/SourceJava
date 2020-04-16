@@ -1,0 +1,386 @@
+.page {
+    width: 1024px;
+    background-color: #f3f3f3b3;
+    margin: 20px auto 0px auto;
+    border: 1px solid #008c44;
+    -webkit-box-shadow: 3px 3px 5px -2px rgba(66,66,66,1);
+    -moz-box-shadow: 3px 3px 5px -2px rgba(66,66,66,1);
+    box-shadow: 3px 3px 5px -2px rgba(66,66,66,1);
+}
+
+.header {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    /*background: #4b6c9e;*/
+    /*background: #0072BC;*/
+    background: #fff;
+    width: 100%;
+}
+
+    .header h1 {
+        font-weight: 700;
+        margin: 0px;
+        padding: 0px 0px 0px 20px;
+        /*color: #f9f9f9;*/
+        /*color: #0071BA;*/
+        font-family: rockwell;
+        margin-left: 69px;
+        font-size: 40px;
+        font-style: italic;
+        color: darkcyan;
+        border: none;
+        line-height: 2em;
+        font-size: 2em;
+    }
+
+.main {
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+.footer {
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+div.menu {
+    padding: 0px 0px 0px 0px;
+}
+
+    div.menu ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        width: auto;
+    }
+
+        div.menu ul li a, div.menu ul li a:visited {
+            /*background-color: #465c71*/
+            /*background-color: #0072BC;*/
+            background-color: #008c44;
+            /*background-color: #005A96;*/
+            border: 1px #008c44 solid;
+            color: #dde4ec;
+            display: block;
+            line-height: 1.35em;
+            padding: 4px 20px;
+            text-decoration: none;
+            white-space: nowrap;
+            z-index: 1;
+            position: relative;
+        }
+
+            div.menu ul li a:hover {
+                background-color: #f9b259;
+                color: #465c71;
+                text-decoration: none;
+            }
+
+            div.menu ul li a:active {
+                background-color: #465c71;
+                color: #cfdbe6;
+                text-decoration: none;
+            }
+
+/******************************************** END PHUONG ADD
+   HTML ELEMENTS
+********************************************/
+
+/* top elements */
+* {
+    padding: 0;
+    outline: 0;
+    margin-left: 0;
+    margin-right: 0px;
+}
+
+html {
+    background: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    color: #000000;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    color: #000000;
+    text-align: center;
+    margin: 5px 0 5px 0;
+}
+
+a, input, select, span, label, legend, href, p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+    a:visited {
+        text-decoration: none;
+        background: inherit;
+        color: #FB9233;
+    }
+
+font:hover {
+    color: Red;
+}
+
+
+
+/********************************************
+   LAYOUT
+********************************************/
+#wrap {
+    width: 1020px;
+    /*background: url(content.jpg) repeat-y left top;*/
+    margin: 0 auto;
+    text-align: left;
+}
+
+#content-wrap {
+    margin: 0px;
+    clear: both;
+    width: 1020px;
+    padding: 0;
+}
+
+#header {
+    position: relative;
+    height: 120px;
+    background: #FFFFFF url(header.jpg) no-repeat left top;
+    padding: 0;
+    color: #2d4b9b;
+}
+
+    /* header language */
+    #header #header-language {
+        position: absolute;
+        color: #C6DDEE;
+        top: 5px;
+        right: 9px;
+    }
+
+        #header #header-language a {
+            color: #2D4B9D;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 9pt;
+            font-weight: normal;
+        }
+
+            #header #header-language a:hover {
+                color: red;
+            }
+
+    /* header links */
+    #header #header-links {
+        position: absolute;
+        color: #C6DDEE;
+        font: bold 14px"Trebuchet MS", Arial, Tahoma, Sans-serif;
+        top: 10px;
+        right: 210px;
+    }
+
+        #header #header-links a {
+            color: #2D4B9D;
+            text-decoration: none;
+        }
+
+            #header #header-links a:hover {
+                color: red;
+            }
+
+    /* header user */
+    #header #header-user {
+        color: #C6DDEE;
+        font: bold 12px "Trebuchet MS", Arial, Tahoma, Sans-serif;
+        top: 25px;
+        right: 9px;
+        position: absolute;
+        text-align: right;
+    }
+
+        #header #header-user a {
+            color: #2D4B9D;
+            text-decoration: none;
+        }
+
+            #header #header-user a:hover {
+                color: red;
+            }
+
+    /* header path */
+    #header #header-path {
+        color: #C6DDEE;
+        font: bold 12px "Trebuchet MS", Arial, Tahoma, Sans-serif;
+        top: 100px;
+        left: 10px;
+        position: absolute;
+        text-align: left;
+    }
+
+        #header #header-path a {
+            color: #2D4B9D;
+            text-decoration: none;
+        }
+
+            #header #header-path a:hover {
+                color: red;
+            }
+/* navigation */
+#mainmenu {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    background: url(menu.jpg) repeat-y;
+    /*font: bold 10px "trebuchet MS" , Arial, Tahoma, Sans-serif;*/
+    height: 30px;
+    width: 1020px;
+}
+
+#clock {
+    float: left;
+    clear: both;
+    margin: 0;
+    padding: 2px 0 0 3px;
+    font: normal 10px Arial, Helvetica, sans-serif;
+    /*height: 25px;*/
+    width: 150px;
+    position: absolute;
+    color: #FFFFFF;
+}
+
+#menu {
+    float: right;
+    clear: both;
+    margin: 0 auto 0 175px;
+    padding: 0px;
+    position: absolute;
+    top: 143px;
+    left: 94px;
+    height: 24px;
+}
+
+    #menu a {
+        display: block;
+        float: left;
+        text-decoration: none;
+    }
+
+        #menu a:hover {
+            color: #FEF200;
+        }
+/* Main Column */
+#maintitle {
+    float: right;
+    width: 835px;
+    height: 25px;
+    display: inline;
+    background: url(title.jpg) no-repeat;
+    margin-top: 0px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    padding-top: 3px;
+    padding-left: 2px;
+}
+
+.Title_Text {
+    font: normal 14pt Arial, Helvetica, sans-serif;
+    color: #2d4b9b;
+    font-weight: bold;
+}
+
+#maincontent {
+    margin: 0px 5px 0px 4px;
+    padding: 2px;
+    float: right;
+    width: 835px;
+    display: inline;
+    height: 309px;
+}
+
+    #maincontent a {
+        color: #2d4b9b;
+        text-decoration: none;
+    }
+
+        #maincontent a:hover {
+            color: red;
+        }
+
+
+/* Sidebar */
+#sidebar {
+    float: left;
+    width: 170px;
+    padding: 5px 0 5px 2px;
+    color: #2D4B9D;
+    font: normal 8pt Arial,Helvetica,sans-serif;
+    vertical-align: top;
+}
+
+    #sidebar a {
+        color: #0000FF;
+        text-decoration: none;
+    }
+
+        #sidebar a:hover {
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+
+    #sidebar table {
+        color: #0000FF;
+    }
+/* Footer */
+#footer {
+    color: #C6DDEE;
+    background: #2d4b9b url(footer.jpg) no-repeat center top;
+    clear: both;
+    width: 1020px;
+    height: 60px;
+    text-align: center;
+    font-size: 90%;
+}
+
+    #footer p {
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    #footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+/* display and additional classes */
+.clear {
+    clear: both;
+}
+
+
+/*---------------------------------------------------------------*/
+
+.msg_button_class {
+    height: 22px;
+    background-image: url('App_Themes/Default/mbImgs/msg_button_1.jpg');
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+}
+
+.modalBackground {
+    background-color: #8B8B8B;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+/*-------------------------------------------*/
+

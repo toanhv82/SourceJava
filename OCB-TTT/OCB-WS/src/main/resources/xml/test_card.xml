@@ -1,0 +1,268 @@
+<UFXMsg direction="Rq" msg_type="Application" scheme="WAY4Appl" version="2.0">
+    <MsgId>{MsgId}</MsgId>
+    <Source app="Web01" />
+    <MsgData>
+        <Application>
+            <RegNumber>{RegNumber}</RegNumber>
+            <Institution>0001</Institution>
+            <OrderDprt>0101</OrderDprt>
+            <ObjectType>Client</ObjectType>
+            <ActionType>Add</ActionType>
+            <Data>
+                <Client>
+                    <ClientType>PR</ClientType>
+                    <ClientInfo>
+                        <ClientNumber>{ClientNumber}</ClientNumber><!--client_code -->
+                        <RegNumberType>CMND</RegNumberType><!-- Ngay cap CMND -->
+                        <RegNumber>{RegNumber1}</RegNumber><!-- So CMND-->
+                        <RegNumberDetails>1990-01-01</RegNumberDetails><!-- Noi cap CMND-->
+                        <ShortName>SV</ShortName><!-- Ten KH --><!--Title>MR</Title--><!--Full \ Configuration Setup \ Client -->
+                        <FirstName></FirstName>
+                        <LastName>SV</LastName>
+                        <Country>VNM</Country><!--Ma quoc gia -->
+                        <MaritalStatus>X</MaritalStatus><!-- xem trong bang marital_status -->
+                        <Position></Position><!-- vi tri-->
+                        <CompanyName></CompanyName>
+                        <CompanyTradeName></CompanyTradeName>
+                        <BirthDate>{BirthDate}</BirthDate><!-- yyyy/mm/dd-->
+                        <BirthPlace></BirthPlace>
+                        <BirthName></BirthName>
+                        <Gender>Female</Gender><!-- Male/ Female/ Not specified-->
+                    </ClientInfo>
+                    <PlasticInfo>
+                        <FirstName></FirstName>
+                        <LastName></LastName>
+                        <CompanyName></CompanyName>
+                    </PlasticInfo>
+                    <PhoneList>
+                        <Phone>
+                            <PhoneType>Work</PhoneType>
+                            <PhoneNumber></PhoneNumber>
+                        </Phone>
+                        <Phone>
+                            <PhoneType>Home</PhoneType>
+                            <PhoneNumber></PhoneNumber>
+                        </Phone>
+                        <Phone>
+                            <PhoneType>Mobile</PhoneType>
+                            <PhoneNumber>123444</PhoneNumber>
+                        </Phone>
+                    </PhoneList>
+                    <DateOpen>{DateOpen}</DateOpen><!-- yyyy/mm/dd-->
+                    <BaseAddress><!-- vao bang client-->
+                        <AddressType>PIN</AddressType><!--select * from address_type-->
+                        <EMail></EMail>
+                        <Country>VNM</Country>
+                        <City>HCM</City>
+                        <PostalCode></PostalCode>
+                        <AddressLine1>N</AddressLine1>
+                        <AddressLine2></AddressLine2>
+                        <AddressLine3></AddressLine3>
+                        <AddressLine4></AddressLine4>
+                    </BaseAddress>
+                    <AddInfo>
+                        <ADDINFO01>O</ADDINFO01><!--status code của client (O:Open, C:Close)-->
+                        <ADDINFO02></ADDINFO02><!--Organization: truong lien ket: Organizations linked trên form tạo thẻ-->
+                    </AddInfo>
+                </Client>
+            </Data>
+            <SubApplList>
+                <Application><!-- additional Address -->
+                    <RegNumber>{RegNumber2}</RegNumber>
+                    <ObjectType>ClientAddress</ObjectType>
+                    <ActionType>Add</ActionType>
+                    <Data>
+                        <Address>
+                            <AddressType>PHS_ADDR</AddressType>
+                            <Country>VNM</Country>
+                            <City>HCM</City>
+                            <PostalCode></PostalCode>
+                            <AddressLine1>N</AddressLine1>
+                            <AddressLine2></AddressLine2>
+                            <AddressLine3></AddressLine3>
+                            <AddressLine4></AddressLine4>
+                        </Address>
+                    </Data>
+                </Application>
+                <Application><!-- additional Address -->
+                    <RegNumber>{RegNumber}_3</RegNumber>
+                    <ObjectType>ClientAddress</ObjectType>
+                    <ActionType>Add</ActionType>
+                    <Data>
+                        <Address>
+                            <AddressType>PST_ADDR</AddressType>
+                            <Country>VNM</Country>
+                            <City>HCM</City>
+                            <PostalCode></PostalCode>
+                            <AddressLine1>N</AddressLine1>
+                            <AddressLine2></AddressLine2>
+                            <AddressLine3></AddressLine3>
+                            <AddressLine4></AddressLine4>
+                        </Address>
+                    </Data>
+                </Application>
+                <Application><!-- additional Address -->
+                    <RegNumber>{RegNumber1}_4</RegNumber>
+                    <ObjectType>ClientAddress</ObjectType>
+                    <ActionType>Add</ActionType>
+                    <Data>
+                        <Address>
+                            <AddressType>WRK_ADDR</AddressType>
+                            <Country>VNM</Country>
+                            <City>HCM</City>
+                            <PostalCode></PostalCode>
+                            <AddressLine1>N</AddressLine1>
+                            <AddressLine2></AddressLine2>
+                            <AddressLine3></AddressLine3>
+                            <AddressLine4></AddressLine4>
+                        </Address>
+                    </Data>
+                </Application>
+                <Application>
+                    <RegNumber>{RegNumber1}_5</RegNumber>
+                    <OrderDprt>0101</OrderDprt>
+                    <ObjectType>Contract</ObjectType>
+                    <ActionType>Add</ActionType>
+                    <Data>
+                        <Contract>
+                            <ContractName>SV</ContractName>
+                            <Product>
+                                <ProductCode1>IDLM001</ProductCode1><!--Issuing-->
+                            </Product>
+                            <DateOpen>{DateOpen}</DateOpen>
+                            <AddContractInfo>
+                                <ADDINFO01></ADDINFO01><!-- AUTO_PAYMENT_FLAG: The debit de null-->
+                                <ADDINFO02></ADDINFO02><!-- SMS flag: The debit de null-->
+                            </AddContractInfo>
+                        </Contract>
+                    </Data>
+                    <SubApplList>
+                        <Application><!-- Address muc issuing contract-->
+                            <RegNumber>{RegNumber1}_6</RegNumber>
+                            <ObjectType>ContractAddress</ObjectType>
+                            <ActionType>Add</ActionType>
+                            <Data>
+                                <Address>
+                                    <AddressType>PHS_ADDR</AddressType>
+                                    <PhoneList>
+                                        <Phone>
+                                            <PhoneType>Work</PhoneType>
+                                            <PhoneNumber></PhoneNumber>
+                                        </Phone>
+                                        <Phone>
+                                            <PhoneType>Home</PhoneType>
+                                            <PhoneNumber></PhoneNumber>
+                                        </Phone>
+                                        <Phone>
+                                            <PhoneType>Mobile</PhoneType>
+                                            <PhoneNumber></PhoneNumber>
+                                        </Phone>
+                                    </PhoneList>
+                                    <EMail></EMail>
+                                    <Country>VNM</Country>
+                                    <City>HCM</City>
+                                    <PostalCode></PostalCode>
+                                    <AddressLine1>NN</AddressLine1>
+                                    <AddressLine2></AddressLine2>
+                                    <AddressLine3></AddressLine3>
+                                    <AddressLine4></AddressLine4>
+                                </Address>
+                            </Data>
+                        </Application>
+                        <Application>
+                            <RegNumber>{RegNumber1}_7</RegNumber>
+                            <OrderDprt>0101</OrderDprt>
+                            <ObjectType>Contract</ObjectType>
+                            <ActionType>Add</ActionType>
+                            <Data>
+                                <Contract>
+                                    <Product>
+                                        <ProductCode1>CDLMM00101</ProductCode1><!--Card-->
+                                    </Product>
+                                    <PlasticInfo>
+                                        <FirstName></FirstName>
+                                        <LastName>SV</LastName>
+                                        <CompanyName></CompanyName>
+                                    </PlasticInfo>
+                                    <DateOpen>{DateOpen}</DateOpen>
+                                    <AddContractInfo>
+                                        <ADDINFO01>0000131811D</ADDINFO01><!--source_application_no trong cp_card-->
+                                    </AddContractInfo>
+                                </Contract>
+                            </Data>
+                            <SubApplList>
+                                <Application>
+                                    <RegNumber>{RegNumber1}_8</RegNumber>
+                                    <OrderDprt>0101</OrderDprt>
+                                    <ObjectType>ContractClassifier</ObjectType>
+                                    <ActionType>AddOrUpdate</ActionType>
+                                    <Data>
+                                        <CustomerClassifiers>
+                                            <Classifier>
+                                                <Code>OCB_CLIENT_CAT</Code>
+                                                <Value>N</Value>
+                                            </Classifier>
+                                            <Classifier>
+                                                <Code>CARD_TRANS_FEE_CLS</Code>
+                                                <Value></Value>
+                                            </Classifier>
+                                            <Classifier>
+                                                <Code>CARD_ANUAL_FEE_CLS</Code>
+                                                <Value></Value>
+                                            </Classifier>
+                                        </CustomerClassifiers>
+                                    </Data>
+                                </Application>
+                                <Application>
+                                    <RegNumber>{RegNumber1}_9</RegNumber>
+                                    <OrderDprt>0101</OrderDprt>
+                                    <ObjectType>Card</ObjectType>
+                                    <ActionType>Add</ActionType>
+                                    <Data>
+                                        <ProduceCard>
+                                            <ProductionType>PlasticAndPIN</ProductionType>
+                                            <ProductionEvent>NCRDNP</ProductionEvent>
+                                            <CommentText></CommentText>
+                                        </ProduceCard>
+                                    </Data>
+                                </Application>
+                                <Application><!-- Address muc issuing contract-->
+                                    <RegNumber>{RegNumber1}_10</RegNumber>
+                                    <ObjectType>ContractAddress</ObjectType>
+                                    <ActionType>Add</ActionType>
+                                    <Data>
+                                        <Address>
+                                            <AddressType>STMT</AddressType>
+                                            <PhoneList>
+                                                <Phone>
+                                                    <PhoneType>Work</PhoneType>
+                                                    <PhoneNumber></PhoneNumber>
+                                                </Phone>
+                                                <Phone>
+                                                    <PhoneType>Home</PhoneType>
+                                                    <PhoneNumber></PhoneNumber>
+                                                </Phone>
+                                                <Phone>
+                                                    <PhoneType>Mobile</PhoneType>
+                                                    <PhoneNumber>123444</PhoneNumber>
+                                                </Phone>
+                                            </PhoneList>
+                                            <EMail></EMail>
+                                            <Country>VNM</Country>
+                                            <City>HCM</City>
+                                            <PostalCode></PostalCode>
+                                            <AddressLine1>NA</AddressLine1>
+                                            <AddressLine2></AddressLine2>
+                                            <AddressLine3></AddressLine3>
+                                            <AddressLine4></AddressLine4>
+                                        </Address>
+                                    </Data>
+                                </Application>
+                            </SubApplList>
+                        </Application>
+                    </SubApplList>
+                </Application>
+            </SubApplList>
+        </Application>
+    </MsgData>
+</UFXMsg>

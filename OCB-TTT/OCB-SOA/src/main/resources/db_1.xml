@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    
+    <bean id="userSoa" class="com.ocb.ttt.service.dto.UserAPI">              
+        <property name="user" value="soa"></property> 
+        <property name="pw" value="Ttt@123"></property>  
+        <property name="role" value="4"></property>  
+    </bean> 
+    <bean id="userSms" class="com.ocb.ttt.service.dto.UserAPI">              
+        <property name="user" value="sms"></property> 
+        <property name="pw" value="Ttt@123"></property>  
+        <property name="role" value="5"></property>  
+    </bean>  
+    <bean id="managerUser"  class="com.ocb.ttt.sevice.security.ServiceUserLogin">        
+        <property name="listUser">
+            <list value-type="java.util.ArrayList">
+                <ref bean="userSms"/>
+                <ref bean="userSoa"/>
+            </list>
+        </property>
+    </bean>  
+    
+     <bean id="ds" class="com.ocb.ttt.db.connection.OCBDriverManagerDataSource" >
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@DC-WAY4-DB-SCAN.ocb.vn:1521:OWPROD" />
+        <property name="username" value="ocb" />
+        <property name="password" value="9840CD8265AB006C8870E3095CA7B4149BDD03FE4BA14C0774870752DF2D578E" />   
+    </bean>    
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">              
+        <property name="dataSource" ref="ds"></property>  
+    </bean>             
+    
+</beans>

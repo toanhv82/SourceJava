@@ -1,0 +1,33 @@
+<UFXMsg direction="Rq" msg_type="Application" scheme="WAY4Appl" version="2.0">
+    <MsgId>{MsgId}</MsgId>
+    <Source app="Web01"/>
+    <MsgData>
+        <Application>
+            <RegNumber>{RegNumber}</RegNumber>
+            <OrderDprt>{OrderDprt}</OrderDprt>
+            <ObjectType>Contract</ObjectType>
+            <ActionType>Update</ActionType>
+            <ObjectFor>
+                <ContractIDT>
+                    <ContractNumber>{ContractNumber}</ContractNumber>
+                    <Relation>02</Relation>         
+                    <Client>
+                        <ClientInfo>
+                            <ShortName>{ShortName}</ShortName>
+                        </ClientInfo>
+                    </Client>
+                  <Product>
+                    <ProductCode1>CDLM002002</ProductCode1>                   
+                  </Product>
+                </ContractIDT>
+            </ObjectFor>
+            <Data>
+                <Contract>
+                    <ContractIDT>
+                        <RBSNumber>{RBSNumber}</RBSNumber>
+                    </ContractIDT>                   
+                </Contract>
+            </Data>
+        </Application>
+    </MsgData>
+</UFXMsg>

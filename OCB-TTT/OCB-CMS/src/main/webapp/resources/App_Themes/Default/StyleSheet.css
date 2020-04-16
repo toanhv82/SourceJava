@@ -1,0 +1,238 @@
+﻿
+body
+{
+	/*background: #2d4b9b;
+	margin: 0; 
+	padding: 0;
+	font-family: Tahoma,Arial,Verdana, 'Times New Roman';
+	font-size: 8pt;
+	text-align:center;
+	color: #000000;
+	border-bottom-color: transparent;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	border-left-style: none;
+	cursor: auto;*/
+	padding: 0;
+	margin: 0;
+	background: #EBF6FD url('../../img/body_bg.jpg') repeat-x 0 0;
+	text-align:center;
+	font-family: Tahoma,Arial,Verdana, 'Times New Roman';
+	font-size: 8pt;
+}
+
+.CRA_WebSite #container
+{
+	background: #FFFFFF;
+	text-align: center; /* this overrides the text-align: center on the body element. */
+	border-left: #0033ff 1px inset;
+	border-top: #0033ff 1px inset;
+	border-right: #0033ff 1px inset;
+	border-bottom: #0033ff 1px inset;
+	width:1182px;
+}
+ 
+.CRA_WebSite #header
+{
+	background: url('../../img/top2.gif') no-repeat left top;
+	height: 106px;
+}
+ .CRA_WebSite #header #user
+{
+	text-align: right;
+	float: left;
+	padding-left: 830px;
+}
+ .CRA_WebSite #header #language
+{	
+	text-align: right;
+	float: right;
+}
+
+.table_body
+{
+	width: 1180px;
+	height: 450px;
+	border-bottom: #2d4b9b 1px solid;
+	border-left: #2d4b9b 1px solid;
+	border-top: #2d4b9b 1px solid;
+	border-right: #2d4b9b 1px solid;
+	font-family: Tahoma,Arial,Verdana, 'Times New Roman';
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	line-height: normal;
+}
+.CRA_WebSite #main
+{
+	height: 100%;	
+}
+.CRA_WebSite #main #sidebarleft
+{
+	padding: 25px 0px 5px 0px;
+	width: 155px;
+	height: 100%;
+	font-family: Tahoma,Arial,Verdana, 'Times New Roman';
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	line-height: 1.5em;
+	color: #2d4b9b;
+	float: left;
+}
+.CRA_WebSite #main #Content
+{
+	width: 835px;
+	font-family: Tahoma,Arial,Verdana, 'Times New Roman';
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	background-color: transparent;
+	color: #2d4b9b;
+	/*float: left;*/
+}
+.MainMenu
+{
+	background-color: #F9E500;
+	color: #2d4b9b;
+	font-weight: bold;
+	text-align: left;
+	font-family: Tahoma,Arial,Verdana, 'Times New Roman';
+	font-size: 8pt;
+	width: 835px;
+	padding-left: 5px;
+	
+}
+.CRA_WebSite #main #Content #Title_Text
+{
+	color: #2d4b9b;
+	height: 20px;
+	font-family: Tahoma,Arial,Verdana, 'Times New Roman';
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: bottom;
+	width: 835px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.CRA_WebSite #main #Content #mainContent
+{
+	font-family: Tahoma,Arial,Verdana, 'Times New Roman';
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+	color: #000000;
+	padding-left: 5px;
+}
+
+.CRA_WebSite #main #sidebarright
+{
+	width: 175px;
+	height: 100%;
+	font-family: Tahoma,Arial,Verdana, 'Times New Roman';
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	line-height: 1.5em;
+	background-color: #FFFFFF;
+	color: #2d4b9b;
+	padding-left: 1px;
+}
+
+.CRA_WebSite #footer
+{
+	/* this padding matches the left alignment of the elements in the divs that appear above it. */
+	border-width: 1px;
+	border-color: #2d4b9b;
+	font-family: Tahoma,Arial,Verdana, 'Times New Roman';
+	font-size: 8pt;
+	text-align: center;
+	border-top-style: solid;
+	height: 70px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+} 
+
+/*---------------------------------------------------------------*/
+.Menu_Top_Text /*hien thi ten dang nhap, chi nhanh va nut logout */
+{
+	color: #939598;
+	font-family: Tahoma,Arial,Verdana, 'Times New Roman';
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: right;
+	height: 22px;
+}
+
+
+/*---------------------------------------------------------------*/
+.IE8Fix 
+{ 
+	z-index: 1000; 
+ 
+	border-bottom-color:White;
+	border-left-color:White;
+	border-right-color:White;
+	font-family: Tahoma,Arial,Verdana, 'Times New Roman';
+	font-size: 8pt;
+	font-weight: bold;
+}
+/*---------------------------------------------------------------*/
+
+.msg_button_class
+{
+	height: 22px;
+	background-image: url('App_Themes/Default/mbImgs/msg_button_1.jpg');
+	font-family:Tahoma;
+	font-size:11px;
+	font-weight:bold;
+	color:#FFFFFF;
+	border:1px solid #DDDDDD;
+}
+
+ .modalBackground
+		{
+			background-color: #8B8B8B;
+			filter: alpha(opacity=70);
+			opacity: 0.7;
+		}
+/*-------------------------------------------*/
+div.MaskedDiv 
+		{
+			visibility: hidden;
+			position:absolute;
+			left:0px;
+			top:0px;
+			font-family:verdana;
+			font-weight:bold;
+			padding:40px;
+			z-index:100;
+			background-image:url('../../img/Mask.png');
+			/* ieWin only stuff */
+			_background-image:none;
+			_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='../../img/Mask.png');
+		}
+
+
+div.ModalPopup 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	background-color: #CCCCCC;
+	position:absolute;
+	/* set z-index higher than possible */
+	z-index:10000;
+	visibility: hidden;
+	 color: Black;
+	border-style: solid;
+	border-color: #999999;
+	border-width: 1px;
+	width: 300px;
+	height :auto;
+}
+/*-------------------------------------------*/

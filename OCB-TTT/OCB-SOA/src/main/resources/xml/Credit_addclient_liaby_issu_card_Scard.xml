@@ -1,0 +1,306 @@
+﻿<UFXMsg direction="Rq" msg_type="Application" scheme="WAY4Appl" version="2.0">
+  <MsgId>{MsgId}</MsgId>
+  <Source app="Web01"/>
+  <MsgData>
+    <Application>
+      <RegNumber>{RegNumber}0</RegNumber>
+      <Institution>0001</Institution>
+      <OrderDprt>{OrderDprt}</OrderDprt>
+      <ObjectType>Client</ObjectType>
+      <ActionType>Add</ActionType>
+      <Data>
+        <Client>
+          <ClientType>PR</ClientType>
+          <ClientInfo>
+            <ClientNumber>{ClientNumber}</ClientNumber>          
+            <RegNumberType>CMND</RegNumberType>            
+            <RegNumber>{RegNumber}</RegNumber>         
+            <RegNumberDetails>PHU YEN</RegNumberDetails>           
+            <ShortName>{ShortName}</ShortName>            
+            <Title>MR</Title>           
+            <FirstName>{FirstName}</FirstName>          
+            <LastName>{LastName}</LastName>         
+            <Country>VNM</Country>            
+            <MaritalStatus>S</MaritalStatus>           
+            <Position>NV</Position>           
+            <CompanyName>OCB</CompanyName>            
+            <CompanyTradeName>OCB</CompanyTradeName>           
+            <BirthDate>1993-04-23</BirthDate>          
+            <BirthPlace>NUI THANH, QUANG NAM</BirthPlace>          
+            <BirthName>HIEU</BirthName>         
+            <Gender>Male</Gender>           
+          </ClientInfo>
+          <PlasticInfo>
+            <FirstName>{FirstName}</FirstName>          
+            <LastName>{LastName}</LastName>          
+            <CompanyName>OCB BANK</CompanyName>            
+          </PlasticInfo>
+          <PhoneList>
+            <Phone>
+              <PhoneType>Work</PhoneType>
+              <PhoneNumber>111111111</PhoneNumber>              
+            </Phone>
+            <Phone>
+              <PhoneType>Home</PhoneType>
+              <PhoneNumber>222222222</PhoneNumber>             
+            </Phone>
+            <Phone>
+              <PhoneType>Mobile</PhoneType>
+              <PhoneNumber>333333333</PhoneNumber>             
+            </Phone>
+          </PhoneList>
+          <DateOpen>2016-01-18</DateOpen>         
+          <BaseAddress>           
+            <AddressType>PIN</AddressType>          
+            <EMail>email_1@gmail.com</EMail>
+            <Country>VNM</Country>
+            <City>QNM</City>            
+            <PostalCode>00334</PostalCode>          
+            <AddressLine1>KHOI 4, THI TRAN NUI THANH</AddressLine1>            
+            <AddressLine2>NUI THANH</AddressLine2>            
+            <AddressLine3>QUANG NAM</AddressLine3>            
+            <AddressLine4>VIET NAM</AddressLine4>           
+          </BaseAddress>
+          <AddInfo>
+            <ADDINFO01>{ADDINFO01}</ADDINFO01>            
+            <ADDINFO02>108004789</ADDINFO02>           
+          </AddInfo>
+        </Client>
+      </Data>
+      <SubApplList>
+        <Application>         
+          <RegNumber>{RegNumber}1</RegNumber>
+          <ObjectType>ClientAddress</ObjectType>
+          <ActionType>Add</ActionType>
+          <Data>
+            <Address>
+              <AddressType>PHS_ADDR</AddressType>
+              <PhoneList>
+                <Phone>
+                  <PhoneType>Home</PhoneType>
+                  <PhoneNumber>222222222</PhoneNumber>                  
+                </Phone>
+                <Phone>
+                  <PhoneType>Mobile</PhoneType>
+                  <PhoneNumber>333333333</PhoneNumber>                  
+                </Phone>
+              </PhoneList>
+              <Country>VNM</Country>
+              <City>HCM</City>
+              <PostalCode>912334</PostalCode>
+              <AddressLine1>KHUONG VIET</AddressLine1>
+              <AddressLine2>TAN PHU</AddressLine2>
+              <AddressLine3>HCM</AddressLine3>
+              <AddressLine4>VN</AddressLine4>
+            </Address>
+          </Data>
+        </Application>
+        <Application>         
+          <RegNumber>{RegNumber}2</RegNumber>
+          <ObjectType>ClientAddress</ObjectType>
+          <ActionType>Add</ActionType>
+          <Data>
+            <Address>
+              <AddressType>WRK_ADDR</AddressType>
+              <PhoneList>
+                <Phone>
+                  <PhoneType>Work</PhoneType>
+                  <PhoneNumber>111111111</PhoneNumber>                  
+                </Phone>
+              </PhoneList>
+              <Country>VNM</Country>
+              <City>HCM</City>
+              <PostalCode>912334</PostalCode>
+              <AddressLine1>KHUONG VIET</AddressLine1>
+              <AddressLine2>TAN PHU</AddressLine2>
+              <AddressLine3>HCM</AddressLine3>
+              <AddressLine4>VN</AddressLine4>
+            </Address>
+          </Data>
+        </Application>
+        <Application>         
+          <RegNumber>{RegNumber}3</RegNumber>
+          <ObjectType>ClientAddress</ObjectType>
+          <ActionType>Add</ActionType>
+          <Data>
+            <Address>
+              <AddressType>STMT</AddressType>
+              <PhoneList>
+                <Phone>
+                  <PhoneType>Home</PhoneType>
+                  <PhoneNumber>00002222</PhoneNumber>
+                </Phone>
+              </PhoneList>
+              <EMail>email_1@gmail.com</EMail>
+              <Country>VNM</Country>
+              <City>HCM</City>
+              <PostalCode>912334</PostalCode>
+              <AddressLine1>39 KHUONG VIET</AddressLine1>
+              <AddressLine2>PHU TRUNG</AddressLine2>
+              <AddressLine3>TAN PHU</AddressLine3>
+              <AddressLine4>HO CHI MINH</AddressLine4>
+            </Address>
+          </Data>
+        </Application>
+        <Application>
+          <RegNumber>{RegNumber}4</RegNumber>
+          <OrderDprt>{OrderDprt}</OrderDprt>
+          <ObjectType>Contract</ObjectType>
+          <ActionType>Add</ActionType>
+          <Data>
+            <Contract>
+              <ClientType>PR</ClientType>
+              <Product>
+                <ProductCode1>LCMM002</ProductCode1>
+              </Product>
+              <DateOpen>2016-01-18</DateOpen>
+              <CreditLimit>
+                <FinanceLimit>
+                  <Amount>300000000</Amount>                 
+                  <Currency>VND</Currency>                
+                </FinanceLimit>
+                <ReasonDetails>Credit limit for Liability Contract</ReasonDetails>              
+              </CreditLimit>             
+            </Contract>
+          </Data>
+          <SubApplList>
+            <Application>
+              <RegNumber>{RegNumber}5</RegNumber>
+              <OrderDprt>{OrderDprt}</OrderDprt>
+              <ObjectType>Contract</ObjectType>
+              <ActionType>Add</ActionType>
+              <Data>
+                <Contract>
+                  <ClientType>PR</ClientType>
+                  <ContractIDT>
+                    <RBSNumber>100013616300001</RBSNumber>                  
+                  </ContractIDT>
+                  <ContractName>{ContractName}</ContractName>
+                  <Product>
+                    <ProductCode1>ICME006</ProductCode1>
+                  </Product>
+                  <DateOpen>2016-01-18</DateOpen>
+                  <CreditLimit>
+                    <FinanceLimit>
+                      <Amount>300000000</Amount>
+                      <Currency>VND</Currency>
+                    </FinanceLimit>
+                    <ReasonDetails>Credit limit for Liability Contract</ReasonDetails>                  
+                  </CreditLimit>
+                  <AddContractInfo>
+                    <ADDINFO01>M</ADDINFO01>                   
+                    <ADDINFO02>Y</ADDINFO02>                   
+                  </AddContractInfo>
+                </Contract>
+              </Data>
+              <SubApplList>
+                <Application>                 
+                  <RegNumber>{RegNumber}6</RegNumber>
+                  <ObjectType>ContractAddress</ObjectType>
+                  <ActionType>Add</ActionType>
+                  <Data>
+                    <Address>
+                      <AddressType>PHS_ADDR</AddressType>
+                      <PhoneList>
+                        <Phone>
+                          <PhoneType>Work</PhoneType>
+                          <PhoneNumber>00001111</PhoneNumber>
+                        </Phone>
+                        <Phone>
+                          <PhoneType>Home</PhoneType>
+                          <PhoneNumber>00002222</PhoneNumber>
+                        </Phone>
+                        <Phone>
+                          <PhoneType>Mobile</PhoneType>
+                          <PhoneNumber>00003333</PhoneNumber>
+                        </Phone>
+                      </PhoneList>
+                      <EMail>mod_!26M_@mail.ru_01</EMail>
+                      <Country>VNM</Country>
+                      <City>HCM</City>
+                      <PostalCode>912334</PostalCode>
+                      <AddressLine1>39 KHUONG VIET</AddressLine1>
+                      <AddressLine2>PHU TRUNG</AddressLine2>
+                      <AddressLine3>TAN PHU</AddressLine3>
+                      <AddressLine4>HO CHI MINH</AddressLine4>
+                    </Address>
+                  </Data>
+                </Application>
+                <Application>
+                  <RegNumber>{RegNumber}7</RegNumber>
+                  <OrderDprt>{OrderDprt}</OrderDprt>
+                  <ObjectType>Contract</ObjectType>
+                  <ActionType>Add</ActionType>
+                  <Data>
+                    <Contract>
+                      <Product>
+                        <ProductCode1>CCMEM00601</ProductCode1>                      
+                      </Product>
+                      <PlasticInfo>                        
+                        <FirstName>CHAU NGOC</FirstName>                       
+                        <LastName>HIEU</LastName>                       
+                        <CompanyName></CompanyName>
+                      </PlasticInfo>
+                      <DateOpen>2016-01-18</DateOpen>
+                      <AddContractInfo>
+                        <ADDINFO01>0000000024</ADDINFO01>                       
+                      </AddContractInfo>
+                    </Contract>
+                  </Data>
+                  <SubApplList>                   
+                    <Application>
+                      <RegNumber>{RegNumber}9</RegNumber>
+                      <OrderDprt>{OrderDprt}</OrderDprt>
+                      <ObjectType>Card</ObjectType>
+                      <ActionType>Add</ActionType>
+                      <Data>
+                        <ProduceCard>
+                          <ProductionType>PlasticAndPIN</ProductionType>
+                          <ProductionEvent>NCRDNP</ProductionEvent>                        
+                          <CommentText></CommentText>
+                        </ProduceCard>
+                      </Data>
+                    </Application>                  
+                  </SubApplList>
+                </Application>
+                <Application>                 
+                  <RegNumber>{RegNumber}10</RegNumber>
+                  <ObjectType>ContractAddress</ObjectType>
+                  <ActionType>Add</ActionType>
+                  <Data>
+                    <Address>
+                      <AddressType>STMT</AddressType>
+                      <PhoneList>
+                        <Phone>
+                          <PhoneType>Work</PhoneType>
+                          <PhoneNumber>00001111</PhoneNumber>
+                        </Phone>
+                        <Phone>
+                          <PhoneType>Home</PhoneType>
+                          <PhoneNumber>00002222</PhoneNumber>
+                        </Phone>
+                        <Phone>
+                          <PhoneType>Mobile</PhoneType>
+                          <PhoneNumber>00003333</PhoneNumber>
+                        </Phone>
+                      </PhoneList>
+                      <EMail>mod_!26M_@mail.ru_01</EMail>
+                      <Country>VNM</Country>
+                      <City>HCM</City>
+                      <PostalCode>912334</PostalCode>
+                      <AddressLine1>39 KHUONG VIET</AddressLine1>
+                      <AddressLine2>PHU TRUNG</AddressLine2>
+                      <AddressLine3>TAN PHU</AddressLine3>
+                      <AddressLine4>HO CHI MINH</AddressLine4>
+                    </Address>
+                  </Data>
+                </Application>
+               
+              </SubApplList>
+            </Application>
+          </SubApplList>
+        </Application>
+      </SubApplList>
+    </Application>
+  </MsgData>
+</UFXMsg>

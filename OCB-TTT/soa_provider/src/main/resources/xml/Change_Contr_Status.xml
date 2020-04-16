@@ -1,0 +1,35 @@
+﻿<UFXMsg direction="Rq" msg_type="Application" scheme="WAY4Appl" version="2.0">
+  <MsgId>{messageId}</MsgId>
+  <Source app="Web01"/>
+  <MsgData>
+    <Application>
+      <RegNumber>{RegNumber}</RegNumber>
+      <OrderDprt>{OrderDprt}</OrderDprt>
+      <ObjectType>Status</ObjectType>
+      <ActionType>Update</ActionType>
+      <ResultDtls>
+        <Parm>
+          <ParmCode>AcceptRq</ParmCode>
+          <Value>Y</Value>
+        </Parm>
+      </ResultDtls>
+      <ObjectFor>
+        <ContractIDT>
+          <ContractNumber>{ContractNumber}</ContractNumber>
+          <Client>
+            <ClientInfo>
+              <ShortName>{ShortName}</ShortName>
+            </ClientInfo>
+          </Client>
+        </ContractIDT>
+      </ObjectFor>
+      <Data>
+        <SetStatus>
+          <StatusCode>{StatusCode}</StatusCode>
+          <StatusComment>{Comment}</StatusComment>
+        </SetStatus>
+      </Data>
+    </Application>
+  </MsgData>
+</UFXMsg>
+

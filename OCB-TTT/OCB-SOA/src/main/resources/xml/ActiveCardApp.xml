@@ -1,0 +1,29 @@
+<R5B007>
+  <Request>
+    <ReqHeader>
+      <ReqCls type="short">9580</ReqCls>
+      <FuncIn type="string" length="1">U</FuncIn>
+      <ActLog type="numeric" length="1">0</ActLog>
+      <GrpID type="string" length="8">UAT</GrpID>
+      <BrchCde type="string" length="5">0001</BrchCde>
+      <UsrID type="string" length="8">PHUONGHB</UsrID>
+      <TaskID type="short">9493</TaskID>
+      <TrmID type="string" length="8"></TrmID>
+      <FI type="fi">970448</FI>
+      <TandemCfg type="string" length="13"></TandemCfg>
+      <GWHNDL type="integer">0</GWHNDL>
+      <Filler1 type="string" length="27"></Filler1>
+    </ReqHeader>
+    <ReqBody>
+      <CrdAcvtMaintReq>
+        <updTms type="timestamp">[yyyymmddhhmi]22830</updTms>
+        <CrdNo1 type="cardNo" length="19">[card_number]</CrdNo1>
+        <CrdTyp type="string" length="1">P</CrdTyp>
+        <AcvtFlg type="string" length="1">N</AcvtFlg>
+        <AcvtBy type="string" length="8"></AcvtBy>
+        <AcvtDt type="date_ddmmyyyy">00000000</AcvtDt>
+        <CrdNm type="string" length="120"></CrdNm>
+      </CrdAcvtMaintReq>
+    </ReqBody>
+  </Request>
+</R5B007>

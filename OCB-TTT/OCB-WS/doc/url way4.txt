@@ -1,0 +1,1 @@
+<add key="SOA_way4" value="http://10.96.21.153:9110/way4gate/httpadapter"/><!--DEV-->

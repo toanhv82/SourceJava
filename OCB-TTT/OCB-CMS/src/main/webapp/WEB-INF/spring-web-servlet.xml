@@ -1,0 +1,73 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:jms="http://www.springframework.org/schema/jms"        
+       xmlns:p="http://www.springframework.org/schema/p"  
+       xmlns:aop="http://www.springframework.org/schema/aop" 
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/jms       
+        http://www.springframework.org/schema/jms/spring-jms-3.0.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+   <import resource="classpath:/db.xml"/>
+   <mvc:annotation-driven /> 
+   <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+   <bean id="logAspect" class="com.ocb.ttt.cms.seccurity.HasPermision" /> 
+   <context:component-scan base-package="com.ocb.ttt.sevice.*" />
+   <context:component-scan base-package="com.ocb.ttt.cms.*" />
+   <context:component-scan base-package="com.ocb.ttt." />
+   <context:component-scan base-package="com.ocb.ttt.roles.dao" />
+   <context:component-scan base-package="com.ocb.ttt.roles.service" />
+    <context:component-scan base-package="com.ocb.ttt.roles.service.impl" />
+  
+   
+   <bean id="applicationContextUtils" class="com.ocb.ttt.sevice.runtime.ApplicationContextUtils"></bean>
+   <bean  class="com.ocb.ttt.common.runtime.BeanConfigSql">
+        <property name="fileName" value="sql/sql.properties"></property>  
+    </bean>    
+    <bean  class="com.ocb.ttt.common.runtime.BeanConfigValue">
+        <property name="fileName" value="config/config.properties"></property>              
+    </bean>    
+     <bean  class="com.ocb.ttt.common.runtime.BeanConfigKeyValues">
+        <property name="fileName" value="keystore.jceks"></property>   
+        <property name="password" value="ttt@123"></property>                
+    </bean> 
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="jsonMessageConverter"/>
+            </list>
+        </property>
+    </bean>
+     <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+          <property name="maxUploadSize" value="50000000"/>
+    </bean>     
+    <bean id="taskExecutor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="5" />
+		<property name="maxPoolSize" value="10" />
+		<property name="WaitForTasksToCompleteOnShutdown" value="true" />
+    </bean>  
+    <bean id="jsonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+    <bean
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">            
+        <property name="prefix">
+            <value>/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+    <!--        <bean id="beanConfigKey" class="com.payment.web.dto.BeanConfigkey"/>  -->
+    <mvc:resources mapping="/resources/**" location="/resources/" />             
+    
+</beans>

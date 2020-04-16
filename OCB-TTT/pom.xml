@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ocb.ttt</groupId>
+    <artifactId>OCB-TTT</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>OCB-API</module>
+        <module>OCB-OBJ</module>
+        <module>OCB-common</module>
+        <module>OCB-WS</module>
+        <module>OCB-CMS</module>
+        <module>OCB-Sevice</module>
+        <module>DHKT</module>
+        <module>COMB</module>
+        <module>OCB-DB</module>
+        <module>OCB-SMS-APP</module>
+        <module>OCB-SOA</module>
+        <module>SYNCHRO-TOKEN</module>
+        <module>OCB-API-TOKEN</module>
+        <module>OCB-TOKENIZATION</module>
+        <module>WebServiceOSB</module>
+        <module>soa_provider</module>
+        <module>OCB-TTT-LOGIN</module>
+<!--        <module>SMS-IMCOMING</module>-->
+        <module>ISO-8583</module>
+        <module>SMS-NOTI</module>
+        <module>OCB-ESB</module>
+        <module>UEH-API</module>
+        <module>Service-Config</module>
+    <module>CARD</module>
+        <module>OCB-ROLES</module>
+    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+        <springframework.version>4.1.3.RELEASE</springframework.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>      
+        <spring.version>4.1.3.RELEASE</spring.version>
+        <jstl.version>1.2</jstl.version>       
+        <jstl.version>1.2</jstl.version>
+        <aspectj.version>1.6.11</aspectj.version>
+        <spring.boot.version>2.2.0.RELEASE</spring.boot.version>
+     
+    </properties>
+    <dependencies>        
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+            <scope>runtime</scope>
+        </dependency>  
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+       
+        
+    </dependencies>
+       
+</project>

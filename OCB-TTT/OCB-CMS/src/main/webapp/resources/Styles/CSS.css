@@ -1,0 +1,38 @@
+﻿body {
+}
+.tbdebitinfo
+{
+}
+.btdebitinfo
+{ 
+    font-size: xx-smaill;
+    }
+.btdebitinfo_Search
+{
+    font-size: xx-smaill;
+    }
+.tbdebit_Detail
+{
+    height:17px;
+    width:100px;
+}
+.tbdebit_Detail_col3
+{
+    height:17px;
+    width:100px;
+}
+.tbdebit_Detail_col4
+{
+    height:17px;
+    width:80px;
+}
+.tbdebit_Detail_mail
+{
+    height:17px;
+    width: 230px;
+}
+.lbdebitinfo
+{
+   font-size:small;
+    text-align: left;
+}

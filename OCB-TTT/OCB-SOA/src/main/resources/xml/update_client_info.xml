@@ -1,0 +1,67 @@
+<UFXMsg direction="Rq" msg_type="Application" scheme="WAY4Appl" version="2.0">
+    <MsgId>{MsgId}</MsgId>
+    <Source app="Web01"/>
+    <MsgData>
+        <Application>
+            <RegNumber>{RegNumber}</RegNumber>
+            <OrderDprt>0101</OrderDprt>
+            <ObjectType>Client</ObjectType>
+            <ActionType>Update</ActionType>
+            <ObjectFor>                
+                <ClientIDT>
+                    <ClientInfo>
+                        <ClientNumber>{ClientNumber}</ClientNumber>
+                        <ShortName>{ShortName}</ShortName>
+                    </ClientInfo>
+                </ClientIDT>
+            </ObjectFor>
+            <Data>
+                <Client>
+                    <ClientInfo>
+                        <Title>MR</Title>
+                        <FirstName>{FirstName}</FirstName>
+                        <LastName>{LastName}</LastName>
+                        <MiddleName>{MiddleName}</MiddleName>
+                        <SecurityName></SecurityName>
+                        <MaritalStatus>S</MaritalStatus>
+                        <Position>SV</Position>
+                        <CompanyName>DHKT</CompanyName>
+                        <CompanyTradeName>DHKT</CompanyTradeName>
+                        <BirthDate>{BirthDate}</BirthDate>
+                        <BirthPlace>{BirthPlace}</BirthPlace>                       
+                    </ClientInfo>
+                    <PlasticInfo>
+                        <FirstName>{FirstName}</FirstName>
+                        <LastName>{LastName}</LastName>
+                    </PlasticInfo>
+                    <PhoneList>
+                        <Phone>
+                            <PhoneType>Work</PhoneType>
+                            <PhoneNumber>{PhoneNumber}</PhoneNumber>
+                        </Phone>
+                        <Phone>
+                            <PhoneType>Home</PhoneType>
+                            <PhoneNumber>{PhoneNumber}</PhoneNumber>
+                        </Phone>
+                        <Phone>
+                            <PhoneType>Mobile</PhoneType>
+                            <PhoneNumber>{PhoneNumber}</PhoneNumber>
+                        </Phone>
+                    </PhoneList>
+                    <BaseAddress>
+                        <AddressType>PIN</AddressType>
+                        <FirstName>{FirstName}</FirstName>
+                        <LastName>{LastName}</LastName>                                     
+                        <City>{City}</City>                       
+                        <AddressLine1></AddressLine1>
+                        <AddressLine2></AddressLine2>
+                        <AddressLine3></AddressLine3>
+                        <AddressLine4></AddressLine4>                       
+                    </BaseAddress>
+                </Client>
+            </Data>
+        </Application>
+    </MsgData>
+</UFXMsg>
+
+

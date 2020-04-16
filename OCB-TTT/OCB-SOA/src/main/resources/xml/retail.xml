@@ -1,0 +1,32 @@
+  <UFXMsg direction="Rq" msg_type="Doc" scheme="WAY4Doc" version="2.0">
+    <MsgId>{MsgId}</MsgId>
+    <Source app="Web01"/>
+    <MsgData>
+        <Doc>
+            <TransType>
+                <TransCode>
+                    <MsgCode>02200R</MsgCode>
+                </TransCode>
+            </TransType>
+            <DocRefSet>
+                <Parm>
+                    <ParmCode>RRN</ParmCode>
+                    <Value>{RegNumber}</Value>
+                </Parm>
+            </DocRefSet>
+            <Description>THEANHDEPTRAI</Description>
+            <Requestor>
+                <ContractNumber>9704480831543222</ContractNumber>
+            </Requestor>
+            <Source>
+                <ContractNumber>00144750</ContractNumber>                
+            </Source>
+            <Transaction>
+                <Currency>VND</Currency>
+                <Amount>511000</Amount>
+            </Transaction>
+        </Doc>
+    </MsgData>
+</UFXMsg>
+        
+        

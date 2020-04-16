@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>ocb.ttt</groupId>
+        <artifactId>OCB-TTT</artifactId>
+        <version>1.0</version>
+    </parent>
+    <groupId>com.ocb.ttt.sms.imcoming</groupId>
+    <artifactId>SMS-IMCOMING</artifactId>
+    <packaging>jar</packaging>
+    <properties>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>      
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+         <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+       
+        <dependency>
+            <groupId>ocb.ttt</groupId>
+            <artifactId>OCB-OBJ</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>ocb.ttt</groupId>
+            <artifactId>OCB-common</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>ocb.ttt</groupId>
+            <artifactId>OCB-Sevice</artifactId>
+            <version>1.0</version>
+        </dependency>   
+       
+     
+        
+    </dependencies>
+</project>

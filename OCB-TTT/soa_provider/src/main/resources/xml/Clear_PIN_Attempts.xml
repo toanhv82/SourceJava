@@ -1,0 +1,25 @@
+<UFXMsg direction="Rq" msg_type="Application" version="2.0">
+  <MsgId>{MsgId}</MsgId>
+  <Source app="Web01" />
+  <MsgData>
+    <Application>
+      <RegNumber>{RegNumber}</RegNumber>
+      <OrderDprt>0168</OrderDprt>
+      <ObjectType>Contract</ObjectType>
+      <ActionType>ClearPINAttempts</ActionType>
+      <ObjectFor>
+        <ContractIDT>
+          <ContractNumber>{ContractNumber}</ContractNumber>
+          <Client>
+            <ClientInfo>
+              <ClientNumber>{ClientNumber}</ClientNumber>
+            </ClientInfo>
+          </Client>
+        </ContractIDT>
+      </ObjectFor>
+      <Data>
+        <ProduceCard />
+      </Data>
+    </Application>
+  </MsgData>
+</UFXMsg>

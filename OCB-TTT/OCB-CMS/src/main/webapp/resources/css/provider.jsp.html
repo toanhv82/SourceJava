@@ -1,0 +1,271 @@
+
+<!-- saved from url=(0057)http://localhost:8080/paymet-web-client/home/provider.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="i18n" name="lang">{"createProduction":"Sản Phẩm","createAcount":"Đăng Ký Tài Khoản","inbox":"Hộp Thư"}</script>
+<link type="text/css" id="bootstrap-css" rel="stylesheet" href="./provider.jsp_files/bootstrap.min.css"> 
+<link type="text/css" id="bootstrap-css" rel="stylesheet" href="./provider.jsp_files/style.css"> 
+<link type="text/css" id="bootstrap-css" rel="stylesheet" href="./provider.jsp_files/font-awesome.min.css">
+<link type="text/css" id="bootstrap-css" rel="stylesheet" href="./provider.jsp_files/font-awesome.css">
+<script src="./provider.jsp_files/jquery-1.12.4-jquery.min.js.tải xuống" type="text/javascript"></script>   
+<script src="./provider.jsp_files/jquery.cookie.js.tải xuống" type="text/javascript"></script>         
+<link type="text/css" rel="stylesheet" id="parsley-css" href="./provider.jsp_files/parsley.css">           
+<script src="./provider.jsp_files/mustache.min.js.tải xuống" type="text/javascript"></script>
+<script src="./provider.jsp_files/parsley.min.js.tải xuống" type="text/javascript"></script>        
+<script src="./provider.jsp_files/utilfn.js.tải xuống" type="text/javascript"></script>        
+<script src="./provider.jsp_files/def.js.tải xuống" type="text/javascript"></script>     
+ <script type="template" name="provider-form" id="provider-form">
+
+
+  <div class="container-fluid">
+  <div class="py-5 text-center">
+    
+    <h2>Checkout form</h2>
+    <p class="lead">Below is an example form built entirely with Bootstraps form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+  </div>
+
+      <div class="container center">
+    <div style="width: 70%;">
+    <div  class="mb-3">
+      <h4 class="mb-3">Information service</h4>
+      <form class="needs-validation" novalidate="">
+        <div class="mb-3">
+          
+            <label for="firstName">Service name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Name Service" value="" required="">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+         
+      
+        <div class="mb-3">
+          <label for="username">Price</label>
+          <div class="input-group">            
+            <input type="text" class="form-control" id="username" placeholder="Price" required="">
+            <div class="invalid-feedback" style="width: 100%;">
+              Your username is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">File <span class="text-muted">(Optional)</span></label>
+          <input type="file" class="form-control" id="file" placeholder="Input file">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address">Detail Service</label>
+          
+          <textarea class="form-control" rows="10">
+              
+          </textarea>
+          
+          <div class="invalid-feedback">
+            Please enter your shipping address.
+          </div>
+        </div>
+
+        
+       
+        <hr class="mb-4">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="same-address">
+          <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="save-info">
+          <label class="custom-control-label" for="save-info">Save this information for next time</label>
+        </div>
+        <hr class="mb-4">
+
+        <h4 class="mb-3">Payment</h4>
+
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+            <label class="custom-control-label" for="credit">Credit card</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+            <label class="custom-control-label" for="debit">Debit card</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+            <label class="custom-control-label" for="paypal">PayPal</label>
+          </div>
+        </div>
+       
+        
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+      </form>
+    </div>
+      </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">© 2017-2019 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+</div>
+
+
+</script>
+
+ <link type="text/css" id="bootstrap-css" rel="stylesheet" href="./provider.jsp_files/home.css"> 
+ </head><body>
+ <div>
+
+</div>
+<div id="header">
+
+    <div class="header-info">
+        
+        <span class="bfh-selectbox-option"><i class="glyphicon bfh-flag-US"></i>English</span>
+        <div class="right" style="float: right">
+                  <div class="col-xs-3">
+                      <p class="hot-line">
+                     <i class="fa fa-phone" aria-hidden="true"></i>
+                      Hotline: 1800 6086</p>
+                  </div>     
+        </div>
+        
+        
+    </div>   
+    
+    <div id="logo">
+        <a href="http://localhost:8080/paymet-web-client/home/index.html"><img src="./provider.jsp_files/logo.jpg" alt=""></a>		
+    </div>		
+    <ul>
+        <li class="selected"><a href="http://localhost:8080/paymet-web-client/home/home.jsp"><span>home</span></a></li>
+        <li><a href="http://localhost:8080/paymet-web-client/home/provider.jsp"><span>about us</span></a></li>
+        <li><a href="http://localhost:8080/paymet-web-client/home/services.html"><span>services</span></a></li>
+        <li><a href="http://localhost:8080/paymet-web-client/home/products.html"><span>products</span></a></li>
+        <li><a href="http://localhost:8080/paymet-web-client/home/contact.html"><span>contact us</span></a></li>			
+    </ul>
+
+
+</div>
+
+
+ 
+ <div id="body" class="container-fluid">
+     <div class="about">
+         <h1>about</h1>         
+         <div class="container" id="container" style="padding-top: 0px">
+
+
+  <div class="container-fluid">
+  <div class="py-5 text-center">
+    
+    <h2>Checkout form</h2>
+    <p class="lead">Below is an example form built entirely with Bootstraps form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+  </div>
+
+      <div class="container center">
+    <div style="width: 70%;">
+    <div class="mb-3">
+      <h4 class="mb-3">Information service</h4>
+      <form class="needs-validation" novalidate="">
+        <div class="mb-3">
+          
+            <label for="firstName">Service name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Name Service" value="" required="">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+         
+      
+        <div class="mb-3">
+          <label for="username">Price</label>
+          <div class="input-group">            
+            <input type="text" class="form-control" id="username" placeholder="Price" required="">
+            <div class="invalid-feedback" style="width: 100%;">
+              Your username is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">File <span class="text-muted">(Optional)</span></label>
+          <input type="file" class="form-control" id="file" placeholder="Input file">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address">Detail Service</label>
+          
+          <textarea class="form-control" rows="10">              
+          </textarea>
+          
+          <div class="invalid-feedback">
+            Please enter your shipping address.
+          </div>
+        </div>
+
+        
+       
+        <hr class="mb-4">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="same-address">
+          <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="save-info">
+          <label class="custom-control-label" for="save-info">Save this information for next time</label>
+        </div>
+        <hr class="mb-4">
+
+        <h4 class="mb-3">Payment</h4>
+
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+            <label class="custom-control-label" for="credit">Credit card</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+            <label class="custom-control-label" for="debit">Debit card</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+            <label class="custom-control-label" for="paypal">PayPal</label>
+          </div>
+        </div>
+       
+        
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+      </form>
+    </div>
+      </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">© 2017-2019 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="http://localhost:8080/paymet-web-client/home/provider.jsp#">Privacy</a></li>
+      <li class="list-inline-item"><a href="http://localhost:8080/paymet-web-client/home/provider.jsp#">Terms</a></li>
+      <li class="list-inline-item"><a href="http://localhost:8080/paymet-web-client/home/provider.jsp#">Support</a></li>
+    </ul>
+  </footer>
+</div>
+
+
+</div>
+     </div> 
+      
+ 
+ </div>
+ 
+ <script src="./provider.jsp_files/home.js.tải xuống" type="text/javascript"></script>  
+ </body></html>

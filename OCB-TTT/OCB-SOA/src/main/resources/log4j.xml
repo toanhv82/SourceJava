@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="true">
+    <!-- Console Appender -->
+   <Appender type="File" name="File" fileName="${filenameInfo}">
+            <Layout type="PatternLayout">
+                <Pattern>%d %p %C{1.} [%t] %m%n</Pattern>
+            </Layout>
+        </Appender>
+        <appender name="console" class="org.apache.log4j.ConsoleAppender">
+            <param name="Target" value="System.out" />
+            <layout class="org.apache.log4j.PatternLayout">
+                <param name="ConversionPattern" value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+            </layout>
+        </appender>
+        <!-- Info Log File Appender -->
+        <appender name="info-log" class="org.apache.log4j.FileAppender">
+            <param name="File"  value="c:/cms/info.log" />
+            <param name="DatePattern" value="'.'yyyy-MM-dd" />
+            <layout class="org.apache.lod:/cms/info.log4j.PatternLayout">
+                <param name="ConversionPattern" value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+            </layout>
+            <filter class="org.apache.log4j.varia.LevelRangeFilter">
+                <param name="LevelMin" value="debug" />
+                <param name="LevelMax" value="info" />
+                <param name="AcceptOnMatch" value="true" />
+            </filter>
+        </appender>
+        <!-- Error Log File Appender -->
+        <appender name="error-log" class="org.apache.log4j.FileAppender">
+            <param name="Append" value="false" />
+            <param name="File" value="c:/cms/error.log" />
+             <param name="DatePattern" value="'.'yyyy-MM-dd" />
+            <layout class="org.apache.log4j.PatternLayout">
+                <param name="ConversionPattern" value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+            </layout>
+            <filter class="org.apache.log4j.varia.LevelRangeFilter">
+                <param name="LevelMin" value="warn" />
+                <param name="LevelMax" value="fatal" />
+                <param name="AcceptOnMatch" value="true" />
+            </filter>
+        </appender>
+        <appender name="db-log" class="org.apache.log4j.FileAppender">
+            <param name="Append" value="false" />
+            <param name="File" value="c:/cms/db.log" />
+             <param name="DatePattern" value="'.'yyyy-MM-dd" />
+            <layout class="org.apache.log4j.PatternLayout">
+                <param name="ConversionPattern" value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+            </layout>
+            <filter class="org.apache.log4j.varia.LevelRangeFilter">
+                <param name="LevelMin" value="info"/>
+                <param name="LevelMax" value="fatal" />
+                <param name="AcceptOnMatch" value="true" />
+            </filter>
+        </appender>
+        <appender name="soa-log" class="org.apache.log4j.FileAppender">
+            <param name="Append" value="false" />
+            <param name="File" value="c:/cms/soa-log.log" />
+             <param name="DatePattern" value="'.'yyyy-MM-dd" />
+            <layout class="org.apache.log4j.PatternLayout">
+                <param name="ConversionPattern" value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+            </layout>
+            <filter class="org.apache.log4j.varia.LevelRangeFilter">
+                <param name="LevelMin" value="warn" />
+                <param name="LevelMax" value="fatal" />
+                <param name="AcceptOnMatch" value="true" />
+            </filter>
+        </appender>
+        <logger name="com.ocb.ttt.api.controler.MainControler">
+            <appender-ref ref="info-log" />
+            <appender-ref ref="error-log" />
+        </logger>
+        <logger name="com.ocb.ttt.api.dao.ServiceUsersDAO">
+            <appender-ref ref="db-log"/>       
+        </logger>
+        <logger name="com.ocb.ttt.login">
+            <appender-ref ref="info-log" />
+            <appender-ref ref="error-log" />     
+        </logger>  
+        <logger name="com.ocb.ttt.login.service.LdapAuthen">
+            <appender-ref ref="info-log" />
+            <appender-ref ref="error-log" />     
+        </logger>
+        <logger name="com.ocb.ttt.soa.*">
+            <appender-ref ref="soa-log" />     
+        </logger>
+        <logger name="com.ocb.ttt.soa.provider.templet.service.impl.ProviderSoa">
+            <appender-ref ref="info-log" />
+            <appender-ref ref="error-log" />  
+        </logger>
+         <logger name="com.ocb.ttt.soa.provider.templet.service.impl.ProviderSoa">
+            <appender-ref ref="info-log" />
+            <appender-ref ref="error-log" />  
+        </logger>
+         <logger name="com.ocb.ttt.common.log.LoggerLoader">
+            <appender-ref ref="info-log" />
+            <appender-ref ref="error-log" />  
+        </logger>                    
+        <root>
+            <level value="INFO" />
+            <appender-ref ref="soa-log" />
+        </root>      
+</log4j:configuration>

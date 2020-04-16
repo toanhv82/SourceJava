@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="ds" class="com.ocb.ttt.db.connection.OCBDriverManagerDataSource" >
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@10.96.62.10:1521:OWDEV" />
+        <property name="username" value="ocb" />
+        <property name="password" value="405spIjrqYKiICaJUmCQ0A==" />   
+        <property name="key" value="Ocb@123" />    
+    </bean>
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">              
+        <property name="dataSource" ref="ds"></property>  
+    </bean>    
+</beans>

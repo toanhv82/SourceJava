@@ -1,0 +1,32 @@
+<UFXMsg direction="Rq" msg_type="Application" scheme="WAY4Appl" version="2.0">
+    <MsgId>AAA-555-333-EEE-23124141</MsgId>
+    <Source app="Web01"/>
+    <MsgData>
+        <Application>
+            <RegNumber>9JUL045148</RegNumber>
+            <OrderDprt>0101</OrderDprt>
+            <ObjectType>ContractClassifier</ObjectType>
+            <ActionType>AddOrUpdate</ActionType>
+            <ObjectFor>
+                <ContractIDT>
+                    <ContractNumber>3565050000061503</ContractNumber>
+		    <Relation>01</Relation>
+                    <Client>
+                        <ClientInfo>
+                            <ShortName>NGUYEN THI HOAI NHI</ShortName>
+                        </ClientInfo>
+                    </Client>
+                </ContractIDT>
+            </ObjectFor>
+            <Data>
+                <CustomerClassifiers>
+                    <Classifier>
+                        <Code>CARD_TRANS_FEE_CLS</Code>
+                        <Value>CTF12</Value>
+			<ReasonDetails>THAY DOI</ReasonDetails>
+                    </Classifier>
+                 </CustomerClassifiers>
+            </Data>
+        </Application>
+    </MsgData>
+</UFXMsg>

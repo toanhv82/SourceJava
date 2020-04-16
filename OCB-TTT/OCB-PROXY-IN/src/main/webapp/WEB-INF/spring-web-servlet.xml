@@ -1,0 +1,63 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:jms="http://www.springframework.org/schema/jms"        
+       xmlns:p="http://www.springframework.org/schema/p"  
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/jms  
+        http://www.springframework.org/schema/jms/spring-jms-3.0.xsd">
+  
+    <import resource="classpath:/db.xml"/>   
+    <context:component-scan base-package="com.ocb.ttt.proxy.*" />   
+    <context:component-scan base-package="com.ocb.ttt.service.*" />   
+ 
+    <bean id="user_ttt" class="com.ocb.ttt.model.UserLogin">              
+        <property name="userName" value="ttt"></property> 
+        <property name="pw" value="291efd2a710cf213bab63219c58a3c24861768d639a95a1ad464accef1037c5b"></property>  
+    </bean>    
+     <bean id="serviceUserLogin" class="com.ocb.ttt.sevice.security.ServiceUserLogin">              
+        <property name="listUser">
+            <list>
+                <ref bean="user_ttt"/>
+            </list>
+        </property>  
+    </bean>      
+     
+    
+<!--    <aop:aspectj-autoproxy/>
+
+    <bean id="logAspect" class="com.ocb.ttt.cms.seccurity.HasPermision" />-->  
+    
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="jsonMessageConverter"/>
+            </list>
+        </property>
+    </bean>       
+  
+
+    <bean id="jsonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+    <bean
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">            
+        <property name="prefix">
+            <value>/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+    <!--        <bean id="beanConfigKey" class="com.payment.web.dto.BeanConfigkey"/>  -->
+    <mvc:resources mapping="/**" location="/" />
+    <mvc:annotation-driven />
+        
+        
+
+</beans>

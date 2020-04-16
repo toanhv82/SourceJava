@@ -1,0 +1,70 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:jms="http://www.springframework.org/schema/jms"        
+       xmlns:p="http://www.springframework.org/schema/p"  
+       xmlns:orcl="http://www.springframework.org/schema/data/orcl"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/jms  
+        http://www.springframework.org/schema/jms/spring-jms-3.0.xsd
+        http://www.springframework.org/schema/data/orcl">
+
+    <context:component-scan base-package="com.ocb.ttt.cms.*" />
+    <context:component-scan base-package="com.ocb.ttt.common.**" />
+    <context:component-scan base-package="com.ocb.ttt.ws.*" />   
+    
+    <bean id="process" class="com.ocb.ttt.cms.test.Process">
+        <property name="message" value="Hello World!" />
+    </bean>
+    <bean  class="com.ocb.ttt.common.runtime.BeanConfigSql">
+        <property name="fileName" value="sql/sql.properties"></property>  
+    </bean>
+    <bean  class="com.ocb.ttt.common.runtime.BeanConfigValue">
+        <property name="fileName" value="c:/cms/config/config.properties"></property>  
+    </bean>
+    <bean id="configLoader" class="com.ocb.ttt.common.config.ConfigLoader">
+        <property name="fileName" value="c:/cms/config/config.properties"></property>  
+    </bean>   
+    <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@10.96.62.10:1521:OWDEV" />
+        <property name="username" value="ocb" />
+        <property name="password" value="2.ocb@uat" />
+       
+    </bean> 
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">              
+        <property name="dataSource" ref="ds"></property>  
+    </bean>  
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="jsonMessageConverter"/>
+            </list>
+        </property>
+    </bean>       
+  
+
+    <bean id="jsonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+    <bean
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">            
+        <property name="prefix">
+            <value>/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+    <!--        <bean id="beanConfigKey" class="com.payment.web.dto.BeanConfigkey"/>  -->
+    <mvc:resources mapping="/**" location="/" />
+    <mvc:annotation-driven />
+        
+        
+
+</beans>
